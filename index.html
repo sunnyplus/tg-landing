@@ -7,6 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']},colors:{accent:'#6366f1','accent-h':'#818cf8'}}}}</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
 body{background:#0f172a;color:#e2e8f0}
 .gtext{background:linear-gradient(135deg,#6366f1,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -102,25 +103,25 @@ body{background:#0f172a;color:#e2e8f0}
     <p class="text-slate-400 text-lg">Четыре шага от подключения до живых комментариев</p></div>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 cglow fi d1">
-        <div class="text-3xl mb-4">🎭</div>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4"><i data-lucide="users" class="w-5 h-5 text-indigo-400"></i></div>
         <div class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Шаг 1</div>
         <h3 class="font-semibold text-lg mb-2">Создаём акторов</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Каждый актор — отдельный человек со своей историей, стилем письма и именем. Никаких ботов-клонов.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 cglow fi d2">
-        <div class="text-3xl mb-4">📡</div>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4"><i data-lucide="rss" class="w-5 h-5 text-indigo-400"></i></div>
         <div class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Шаг 2</div>
         <h3 class="font-semibold text-lg mb-2">Подключаем каналы</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Бот мониторит новые посты 24/7. Реагирует в течение часа — как живой читатель.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 cglow fi d3">
-        <div class="text-3xl mb-4">🤖</div>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4"><i data-lucide="sparkles" class="w-5 h-5 text-indigo-400"></i></div>
         <div class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Шаг 3</div>
         <h3 class="font-semibold text-lg mb-2">AI пишет комментарии</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Claude анализирует пост и генерирует уместный живой текст — от лица каждого актора по-своему.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 cglow fi d4">
-        <div class="text-3xl mb-4">📊</div>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4"><i data-lucide="sliders-horizontal" class="w-5 h-5 text-indigo-400"></i></div>
         <div class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Шаг 4</div>
         <h3 class="font-semibold text-lg mb-2">Вы управляете</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Admin-бот в Telegram показывает активность, фазы прогрева и расходы по каждому актору.</p>
@@ -136,31 +137,38 @@ body{background:#0f172a;color:#e2e8f0}
     <p class="text-slate-400 text-lg">Всё для органического роста присутствия в Telegram</p></div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d1">
-        <div class="text-2xl mb-3">🧠</div><h3 class="font-semibold text-lg mb-2">ИИ-генерация</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="brain" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">ИИ-генерация</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Каждый комментарий уникален — Claude генерирует на основе содержания поста. Никаких шаблонов.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d2">
-        <div class="text-2xl mb-3">👥</div><h3 class="font-semibold text-lg mb-2">Несколько акторов</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="users-round" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">Несколько акторов</h3>
         <p class="text-slate-400 text-sm leading-relaxed">5–10 аккаунтов с разными персонами работают одновременно — эксперт, новичок, скептик.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d3">
-        <div class="text-2xl mb-3">🌱</div><h3 class="font-semibold text-lg mb-2">Прогрев аккаунтов</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="flame" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">Прогрев аккаунтов</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Безопасный старт: lurk → реакции → комментарии. Никаких подозрений со стороны Telegram.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d1">
-        <div class="text-2xl mb-3">⚙️</div><h3 class="font-semibold text-lg mb-2">Admin-бот</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="bot" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">Admin-бот</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Полное управление из Telegram: статистика, фазы прогрева, настройки акторов и каналов.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d2">
-        <div class="text-2xl mb-3">👍</div><h3 class="font-semibold text-lg mb-2">Масс-лайкинг</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="thumbs-up" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">Масс-лайкинг</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Акторы ставят реакции от имени живых аккаунтов — привлекают внимание к вашему профилю, bio и привязанному каналу.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d3">
-        <div class="text-2xl mb-3">📬</div><h3 class="font-semibold text-lg mb-2">DM-рассылка</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="mail" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">DM-рассылка</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Акторы находят активных участников канала и ведут с ними личный диалог.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d3">
-        <div class="text-2xl mb-3">📈</div><h3 class="font-semibold text-lg mb-2">Статистика</h3>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-3"><i data-lucide="bar-chart-2" class="w-5 h-5 text-indigo-400"></i></div>
+        <h3 class="font-semibold text-lg mb-2">Статистика</h3>
         <p class="text-slate-400 text-sm leading-relaxed">Каждый комментарий логируется. Расходы и активность по каждому актору в реальном времени.</p>
       </div>
     </div>
@@ -263,6 +271,7 @@ body{background:#0f172a;color:#e2e8f0}
 </footer>
 
 <script>
+lucide.createIcons();
 const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')}),{threshold:.1});
 document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
 
