@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>TG Commenter — живые комментарии в Telegram</title>
+<title>Telegram Dialogs — живые диалоги и комментарии в Telegram</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']},colors:{accent:'#6366f1','accent-h':'#818cf8'}}}}</script>
@@ -25,8 +25,8 @@ body{background:#0f172a;color:#e2e8f0}
 <!-- NAV -->
 <nav class="fixed top-0 w-full z-50 border-b border-white/5" style="background:rgba(15,23,42,.88);backdrop-filter:blur(12px)">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <span class="font-bold text-lg gtext">TG Commenter</span>
-    <a href="https://t.me/sunnyplus" target="_blank"
+    <span class="font-bold text-lg gtext">Telegram Dialogs</span>
+    <a href="https://t.me/sunnyplus?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C+Telegram+Dialogs" target="_blank"
        class="bg-accent hover:bg-accent-h text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
       Оставить заявку
     </a>
@@ -44,14 +44,14 @@ body{background:#0f172a;color:#e2e8f0}
         Работает прямо сейчас
       </div>
       <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-6 fi d1">
-        Живые комментарии<br>в Telegram —<br><span class="gtext">без вашего участия</span>
+        Живые диалоги<br>и комментарии<br><span class="gtext">в Telegram</span>
       </h1>
       <p class="text-slate-400 text-lg leading-relaxed mb-10 fi d2">
         Несколько AI-акторов с уникальными персонами ежедневно пишут уместные комментарии
         в нужных каналах. Выглядит как живое обсуждение — потому что так и задумано.
       </p>
       <div class="flex flex-wrap gap-4 fi d3">
-        <a href="https://t.me/sunnyplus" target="_blank"
+        <a href="https://t.me/sunnyplus?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C+Telegram+Dialogs" target="_blank"
            class="bg-accent hover:bg-accent-h text-white font-semibold px-8 py-3.5 rounded-xl transition-colors">
           Оставить заявку →
         </a>
@@ -153,7 +153,7 @@ body{background:#0f172a;color:#e2e8f0}
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d2">
         <div class="text-2xl mb-3">👍</div><h3 class="font-semibold text-lg mb-2">Масс-лайкинг</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">Акторы расставляют реакции на посты — канал выглядит живым ещё до первого комментария.</p>
+        <p class="text-slate-400 text-sm leading-relaxed">Акторы ставят реакции от имени живых аккаунтов — привлекают внимание к вашему профилю, bio и привязанному каналу.</p>
       </div>
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-6 hover:border-accent/30 transition-colors fi d3">
         <div class="text-2xl mb-3">📬</div><h3 class="font-semibold text-lg mb-2">DM-рассылка</h3>
@@ -178,7 +178,7 @@ body{background:#0f172a;color:#e2e8f0}
       <div class="bg-slate-800/40 border border-white/5 rounded-2xl p-8 fi d1">
         <div class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Демо</div>
         <div class="text-3xl font-bold mb-1">Бесплатно</div>
-        <div class="text-sm text-slate-500 mb-6">Попробуйте перед покупкой</div>
+        <div class="text-sm text-slate-500 mb-6">1 день · Попробуйте перед покупкой</div>
         <ul class="space-y-2.5 mb-8 text-sm text-slate-300">
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> 1 актор</li>
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> 1 канал</li>
@@ -186,7 +186,7 @@ body{background:#0f172a;color:#e2e8f0}
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> Масс-лайкинг</li>
           <li class="flex items-center gap-2"><span class="text-slate-600">–</span> <span class="text-slate-500">Admin-бот</span></li>
         </ul>
-        <a href="https://t.me/sunnyplus" target="_blank"
+        <a href="https://t.me/sunnyplus?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C+Telegram+Dialogs" target="_blank"
            class="block text-center border border-white/20 text-slate-300 hover:border-accent hover:text-accent font-semibold py-3 rounded-xl transition-colors">
           Попробовать
         </a>
@@ -204,7 +204,7 @@ body{background:#0f172a;color:#e2e8f0}
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> Масс-лайкинг</li>
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> Admin-бот</li>
         </ul>
-        <a href="https://t.me/sunnyplus" target="_blank"
+        <a href="https://t.me/sunnyplus?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C+Telegram+Dialogs" target="_blank"
            class="block text-center border border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 rounded-xl transition-colors">
           Оставить заявку
         </a>
@@ -224,7 +224,7 @@ body{background:#0f172a;color:#e2e8f0}
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> DM-рассылка + диалог</li>
           <li class="flex items-center gap-2"><span class="text-accent">✓</span> Приоритетная поддержка</li>
         </ul>
-        <a href="https://t.me/sunnyplus" target="_blank"
+        <a href="https://t.me/sunnyplus?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C+Telegram+Dialogs" target="_blank"
            class="block text-center bg-accent hover:bg-accent-h text-white font-semibold py-3 rounded-xl transition-colors">
           Оставить заявку
         </a>
@@ -254,7 +254,7 @@ body{background:#0f172a;color:#e2e8f0}
 <!-- FOOTER -->
 <footer class="border-t border-white/5 py-10">
   <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-    <span class="font-bold text-lg gtext">TG Commenter</span>
+    <span class="font-bold text-lg gtext">Telegram Dialogs</span>
     <p class="text-slate-500 text-sm">Автоматизация присутствия в Telegram-каналах</p>
     <a href="https://t.me/sunnyplus" target="_blank" class="text-accent hover:text-accent-h font-medium text-sm transition-colors">
       @sunnyplus
