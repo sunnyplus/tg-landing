@@ -63,8 +63,15 @@ body{background:#0f172a;color:#e2e8f0}
     </div>
 
     <!-- Chat slider -->
-    <div class="hidden lg:block fi d2" id="chat-slider-wrap">
-      <div id="chat-slider" style="position:relative;min-height:360px;">
+    <div class="block mt-10 lg:mt-0 fi d2" id="chat-slider-wrap">
+      <div id="chat-slider" style="position:relative;min-height:360px;overflow:hidden;touch-action:pan-y;">
+        <!-- Arrows -->
+        <button id="slide-prev" aria-label="Назад" style="position:absolute;left:-14px;top:50%;transform:translateY(-50%);z-index:10;width:32px;height:32px;border-radius:50%;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;" onmouseenter="this.style.background='rgba(99,102,241,.35)'" onmouseleave="this.style.background='rgba(99,102,241,.15)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a5b4fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button id="slide-next" aria-label="Вперёд" style="position:absolute;right:-14px;top:50%;transform:translateY(-50%);z-index:10;width:32px;height:32px;border-radius:50%;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;" onmouseenter="this.style.background='rgba(99,102,241,.35)'" onmouseleave="this.style.background='rgba(99,102,241,.15)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a5b4fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
 
         <!-- Slide 1: Фондовый рынок -->
         <div class="chat-slide" data-label="📈 Эксперт фондового рынка">
@@ -217,23 +224,37 @@ body{background:#0f172a;color:#e2e8f0}
       var slides=document.querySelectorAll('.chat-slide');
       var dots=document.getElementById('chat-dots');
       var label=document.getElementById('chat-label');
-      var cur=0;
+      var cur=0, timer;
+
       slides.forEach(function(s,i){
         var d=document.createElement('div');
         d.className='chat-dot'+(i===0?' active':'');
         d.onclick=function(){go(i);};
         dots.appendChild(d);
       });
+
       function go(n){
+        clearInterval(timer);
         slides[cur].classList.remove('active');
         dots.querySelectorAll('.chat-dot')[cur].classList.remove('active');
-        cur=n;
+        cur=(n+slides.length)%slides.length;
         slides[cur].classList.add('active');
         dots.querySelectorAll('.chat-dot')[cur].classList.add('active');
         label.textContent=slides[cur].dataset.label;
+        timer=setInterval(function(){go(cur+1);},5000);
       }
+
+      document.getElementById('slide-prev').onclick=function(){go(cur-1);};
+      document.getElementById('slide-next').onclick=function(){go(cur+1);};
+
+      var tx=0, sl=document.getElementById('chat-slider');
+      sl.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+      sl.addEventListener('touchend',function(e){
+        var dx=tx-e.changedTouches[0].clientX;
+        if(Math.abs(dx)>40) go(dx>0?cur+1:cur-1);
+      },{passive:true});
+
       go(0);
-      setInterval(function(){go((cur+1)%slides.length);},5000);
     })();
     </script>
   </div>
