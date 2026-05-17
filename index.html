@@ -62,37 +62,180 @@ body{background:#0f172a;color:#e2e8f0}
       </div>
     </div>
 
-    <!-- Fake Telegram chat -->
-    <div class="hidden lg:flex flex-col gap-3 fi d2">
-      <div class="bg-slate-800/60 rounded-2xl border border-white/5 p-4 mb-1">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="ava bg-blue-700">📈</div>
-          <div><div class="text-sm font-semibold">Тимофей Мартынов</div><div class="text-xs text-slate-500">Канал · 12:34</div></div>
+    <!-- Chat slider -->
+    <div class="hidden lg:block fi d2" id="chat-slider-wrap">
+      <div id="chat-slider" style="position:relative;min-height:360px;">
+
+        <!-- Slide 1: Фондовый рынок -->
+        <div class="chat-slide" data-label="📈 Эксперт фондового рынка">
+          <div class="bg-slate-800/60 rounded-2xl border border-white/5 p-4 mb-2">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="ava bg-blue-700">📈</div>
+              <div><div class="text-sm font-semibold">Тимофей Мартынов</div><div class="text-xs text-slate-500">Канал · 12:34</div></div>
+            </div>
+            <p class="text-sm text-slate-300">Газпром отчитался за год: выручка +8%, но чистая прибыль упала на 22% из-за роста налоговой нагрузки. Дивидендов не ждём?</p>
+          </div>
+          <div class="flex gap-2.5 items-start mb-2">
+            <div class="ava bg-indigo-700">НА</div>
+            <div><div class="text-xs text-slate-500 mb-1">Николай А.</div>
+            <div class="bubble">При таком долге и НДПИ — дивиденды под большим вопросом.</div></div>
+          </div>
+          <div class="flex gap-2.5 items-start justify-end mb-2">
+            <div><div class="text-xs text-slate-500 mb-1 text-right">Алексей К.</div>
+            <div class="bubble out">Ключевое — не прибыль, а свободный денежный поток. Он отрицательный. Держать смысла нет.</div></div>
+            <div class="ava bg-emerald-700">АК</div>
+          </div>
+          <div class="flex gap-2.5 items-start">
+            <div class="ava bg-pink-700">ТМ</div>
+            <div><div class="text-xs text-slate-500 mb-1">Татьяна М.</div>
+            <div class="bubble">Значит выходим? Или ждём отскока?</div></div>
+          </div>
         </div>
-        <p class="text-sm text-slate-300">Сбер отчитался: чистая прибыль за квартал выросла на 14%. Дивиденды под вопросом. Что думаете?</p>
+
+        <!-- Slide 2: Психолог -->
+        <div class="chat-slide" data-label="🧠 Психолог">
+          <div class="bg-slate-800/60 rounded-2xl border border-white/5 p-4 mb-2">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="ava bg-purple-700">💬</div>
+              <div><div class="text-sm font-semibold">Чат «Психология и жизнь»</div><div class="text-xs text-slate-500">Группа · 14:10</div></div>
+            </div>
+            <p class="text-sm text-slate-300">Как справляться с тревогой перед важными событиями? Сердце колотится, мысли разбегаются…</p>
+          </div>
+          <div class="flex gap-2.5 items-start mb-2">
+            <div class="ava bg-violet-700">СК</div>
+            <div><div class="text-xs text-slate-500 mb-1">Светлана К.</div>
+            <div class="bubble">Дыхательные техники помогают, но ненадолго.</div></div>
+          </div>
+          <div class="flex gap-2.5 items-start justify-end mb-2">
+            <div><div class="text-xs text-slate-500 mb-1 text-right">Мария В.</div>
+            <div class="bubble out">Тревога перед событием — нормальный ответ. Не боритесь, а переинтерпретируйте: «я взволнован» работает лучше, чем «я боюсь».</div></div>
+            <div class="ava bg-emerald-700">МВ</div>
+          </div>
+          <div class="flex gap-2.5 items-start">
+            <div class="ava bg-pink-700">ИД</div>
+            <div><div class="text-xs text-slate-500 mb-1">Иван Д.</div>
+            <div class="bubble">Это реально работает? Попробую перед следующей презентацией.</div></div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Юрист -->
+        <div class="chat-slide" data-label="⚖️ Юрист">
+          <div class="bg-slate-800/60 rounded-2xl border border-white/5 p-4 mb-2">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="ava bg-amber-700">⚖️</div>
+              <div><div class="text-sm font-semibold">Правовой ликбез</div><div class="text-xs text-slate-500">Группа · 11:22</div></div>
+            </div>
+            <p class="text-sm text-slate-300">Работодатель не платит за переработки — говорит «ненормированный день». Это вообще законно?</p>
+          </div>
+          <div class="flex gap-2.5 items-start mb-2">
+            <div class="ava bg-indigo-700">АК</div>
+            <div><div class="text-xs text-slate-500 mb-1">Анна К.</div>
+            <div class="bubble">У меня так же — молчу, боюсь потерять место.</div></div>
+          </div>
+          <div class="flex gap-2.5 items-start justify-end mb-2">
+            <div><div class="text-xs text-slate-500 mb-1 text-right">Дмитрий С.</div>
+            <div class="bubble out">Ненормированный день ≠ бесплатные переработки. По ст. 119 ТК — минимум 3 дня допотпуска. Фиксируйте часы и требуйте приказ о режиме.</div></div>
+            <div class="ava bg-emerald-700">ДС</div>
+          </div>
+          <div class="flex gap-2.5 items-start">
+            <div class="ava bg-pink-700">МТ</div>
+            <div><div class="text-xs text-slate-500 mb-1">Максим Т.</div>
+            <div class="bubble">То есть можно потребовать официально? Спасибо, не знал!</div></div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Маркетолог -->
+        <div class="chat-slide" data-label="📣 Маркетолог">
+          <div class="bg-slate-800/60 rounded-2xl border border-white/5 p-4 mb-2">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="ava bg-orange-700">📣</div>
+              <div><div class="text-sm font-semibold">Маркетинг без воды</div><div class="text-xs text-slate-500">Группа · 16:45</div></div>
+            </div>
+            <p class="text-sm text-slate-300">Потратили 150к на таргет в VK, продаж — ноль. Агентство говорит «нужно подождать». Что не так?</p>
+          </div>
+          <div class="flex gap-2.5 items-start mb-2">
+            <div class="ava bg-violet-700">РП</div>
+            <div><div class="text-xs text-slate-500 mb-1">Роман П.</div>
+            <div class="bubble">У нас то же самое. Уже полгода ждём «результата».</div></div>
+          </div>
+          <div class="flex gap-2.5 items-start justify-end mb-2">
+            <div><div class="text-xs text-slate-500 mb-1 text-right">Екатерина Л.</div>
+            <div class="bubble out">Ноль продаж при любом бюджете — сломана воронка, не трафик. Куда ведёт объявление? Скорее всего теряете на посадочной.</div></div>
+            <div class="ava bg-emerald-700">ЕЛ</div>
+          </div>
+          <div class="flex gap-2.5 items-start">
+            <div class="ava bg-pink-700">РП</div>
+            <div><div class="text-xs text-slate-500 mb-1">Роман П.</div>
+            <div class="bubble">Мы ведём на главную сайта… кажется, понял проблему.</div></div>
+          </div>
+        </div>
+
+        <!-- Slide 5: Нутрициолог -->
+        <div class="chat-slide" data-label="🥗 Нутрициолог">
+          <div class="bg-slate-800/60 rounded-2xl border border-white/5 p-4 mb-2">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="ava bg-green-700">🥗</div>
+              <div><div class="text-sm font-semibold">ЗОЖ и питание</div><div class="text-xs text-slate-500">Группа · 09:15</div></div>
+            </div>
+            <p class="text-sm text-slate-300">Сижу на дефиците калорий 3 месяца, вес стоит намертво. Метаболизм сломался?</p>
+          </div>
+          <div class="flex gap-2.5 items-start mb-2">
+            <div class="ava bg-indigo-700">КТ</div>
+            <div><div class="text-xs text-slate-500 mb-1">Ксения Т.</div>
+            <div class="bubble">У меня так же! Уже 1200 ккал и ничего не меняется.</div></div>
+          </div>
+          <div class="flex gap-2.5 items-start justify-end mb-2">
+            <div><div class="text-xs text-slate-500 mb-1 text-right">Наталья Б.</div>
+            <div class="bubble out">«Сломанный метаболизм» — миф. Скорее адаптивный термогенез. 1200 ккал — слишком мало, тело экономит. Нужен рефид, а не урезание.</div></div>
+            <div class="ava bg-emerald-700">НБ</div>
+          </div>
+          <div class="flex gap-2.5 items-start">
+            <div class="ava bg-pink-700">КТ</div>
+            <div><div class="text-xs text-slate-500 mb-1">Ксения Т.</div>
+            <div class="bubble">То есть нужно есть больше, чтобы похудеть?! 🤯</div></div>
+          </div>
+        </div>
+
       </div>
-      <div class="flex gap-2.5 items-start">
-        <div class="ava bg-indigo-700">НА</div>
-        <div><div class="text-xs text-slate-500 mb-1">Николай А.</div>
-        <div class="bubble">Цифры неплохие, но без дивидендов физики потеряют интерес к бумаге.</div></div>
+
+      <!-- Label + dots -->
+      <div class="mt-3 flex flex-col items-center gap-2">
+        <div id="chat-label" class="text-xs text-slate-500 italic"></div>
+        <div id="chat-dots" class="flex gap-1.5"></div>
       </div>
-      <div class="flex gap-2.5 items-start">
-        <div class="ava bg-violet-700">ДС</div>
-        <div><div class="text-xs text-slate-500 mb-1">Диана С.</div>
-        <div class="bubble">Смотрю на free float — переживаю больше за навес от нерезов.</div></div>
-      </div>
-      <div class="flex gap-2.5 items-start justify-end">
-        <div><div class="text-xs text-slate-500 mb-1 text-right">Алексей К.</div>
-        <div class="bubble out">Если -50бп по ставке — Сбер первый на докупку.</div></div>
-        <div class="ava bg-emerald-700">АК</div>
-      </div>
-      <div class="flex gap-2.5 items-start">
-        <div class="ava bg-pink-700">ТМ</div>
-        <div><div class="text-xs text-slate-500 mb-1">Татьяна М.</div>
-        <div class="bubble">Держите или уже зафиксировали? Думаю докупить на откате…</div></div>
-      </div>
-      <div class="text-center text-xs text-slate-600 italic mt-1">↑ Алексей присутствует в чате — даже когда занят другим</div>
     </div>
+
+    <style>
+    .chat-slide{position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity .5s ease;pointer-events:none;display:flex;flex-direction:column;gap:8px;}
+    .chat-slide.active{opacity:1;pointer-events:auto;}
+    .chat-dot{width:6px;height:6px;border-radius:50%;background:#334155;cursor:pointer;transition:background .3s;}
+    .chat-dot.active{background:#6366f1;}
+    </style>
+
+    <script>
+    (function(){
+      var slides=document.querySelectorAll('.chat-slide');
+      var dots=document.getElementById('chat-dots');
+      var label=document.getElementById('chat-label');
+      var cur=0;
+      slides.forEach(function(s,i){
+        var d=document.createElement('div');
+        d.className='chat-dot'+(i===0?' active':'');
+        d.onclick=function(){go(i);};
+        dots.appendChild(d);
+      });
+      function go(n){
+        slides[cur].classList.remove('active');
+        dots.querySelectorAll('.chat-dot')[cur].classList.remove('active');
+        cur=n;
+        slides[cur].classList.add('active');
+        dots.querySelectorAll('.chat-dot')[cur].classList.add('active');
+        label.textContent=slides[cur].dataset.label;
+      }
+      go(0);
+      setInterval(function(){go((cur+1)%slides.length);},5000);
+    })();
+    </script>
   </div>
 </section>
 
